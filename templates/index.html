@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket World Cup Analysis</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <style>
+
+    body {
+      font-family: 'Poppins', sans-serif;  
+      margin: 0;
+      background-color: #02a7d1;
+      color: #fff;
+    }
+    
+    header {
+      background-color: #300175;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c5d9c; 
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px #aaa;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 25px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #FFD201;
+      color: black; 
+      font-family:sans-serif;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- <header>  
+    <div style="display: inline-block;">
+      <img src="cwc logo.jpg" width="100px" height="80px" alt="">
+      <h1>Cricket World Cup Analysis</h1>
+      <h3>FROM 1975 - 2019</h3>
+    </div>
+  </header> -->
+  <header>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+  
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+  
+      <div>
+        <h1>Cricket World Cup Analysis</h1>
+        <h3>FROM 1975 - 2019</h3>  
+      </div>
+  
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+  
+    </div>
+  
+  </header>
+  <div class="content">
+    <br><br>
+    <center><p>Explore insights from Cricket World Cup From 1975 - 2019</p>
+      <form action='/team' method='GET'>
+        <button class="btn btn-primary">Team Performance</button><br>
+      </form><form action='/head-to-head' method='GET'>
+        <button class="btn btn-primary">Head to Head</button><br>
+      </form>
+      <form action='/overall-performance' method='GET'>
+        <button class="btn btn-primary">Overall Performance</button>
+      </form>
+      
+    
+    </center>
+    <br><br><br><br>
+  </div>
+  <footer style="background-color:#E73493;">
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+  
+      <p> Project on Exploratory Data Analysis by 
+        <a href="https://www.linkedin.com/in/sunilthetechy" target="_blank" style="color: #fff; text-decoration: none;">
+          Sunil The Techy
+        </a></p>
+  
+  </footer>
+
+</body>
+</html>

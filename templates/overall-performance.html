@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket World Cup Analysis</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <style>
+    .chart-container img {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+    
+    .chart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;  
+      margin: 0;
+      background-color: #fff;
+      color: #fff;
+    }
+    span{
+        color:#E73493;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        }
+
+    header {
+      background-color: #300175;
+      text-align: center;
+      padding: 20px;
+    }
+    h2{
+      color:black;
+    }
+    h1,h3 {
+      margin: 0;
+    }
+
+
+   
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- <header>  
+    <div style="display: inline-block;">
+      <img src="cwc logo.jpg" width="100px" height="80px" alt="">
+      <h1>Cricket World Cup Analysis</h1>
+      <h3>FROM 1975 - 2019</h3>
+    </div>
+  </header> -->
+  <header>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+  
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+  
+      <div>
+        <h1>Cricket World Cup Analysis</h1>
+        <h3>FROM 1975 - 2019</h3>  
+      </div>
+  
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+  
+    </div>
+  
+  </header>
+  
+  <h1 style="color:#300175">Top 3 Teams Performances</h1>
+<div class='chart-container'>
+  <div>
+    <h2>Trophy Winners</h2>
+    {% for team, value in count %}
+        <div>
+            <p style="font-weight: 900; font-size: 20px;color:#300175">{{ team }}:<span> {{ value }}</span></p>
+        </div>
+    {% endfor %}
+ </div>
+    <div>
+      <h2>Matches Played</h2>
+      {% for team, value in matches %}
+          <div>
+              <p style="font-weight: 900; font-size: 20px;color:#300175">{{ fullform(team) }}:<span> {{ value }}</span></p>
+          </div>
+      {% endfor %}
+   </div>
+   <div>
+    <h2>Runs Scored</h2>
+    {% for team, value in mostruns %}
+        <div>
+            <p style="font-weight: 900; font-size: 20px;color:#300175">{{ fullform(team) }}:<span> {{ value }}</span></p>
+        </div>
+    {% endfor %}
+  </div>
+  <div>
+    <h2>Wickets Taken</h2>
+    {% for team, value in mostwickets %}
+      <div>
+          <p style="font-weight: 900; font-size: 20px;color:#300175">{{ fullform(team) }}:<span> {{ value }}</span></p>
+      </div>
+    {% endfor %}
+  </div>
+<div>
+  <h2>Most Winnings</h2>
+  {% for team, value in mostwins %}
+      <div>
+          <p style="font-weight: 900; font-size: 20px;color:#300175">{{ fullform(team) }}:<span> {{ value }}</span></p>
+      </div>
+  {% endfor %}
+</div>
+<div>
+  <h2>Most Losts</h2>
+  {% for team, value in mostlosts %}
+      <div>
+          <p style="font-weight: 900; font-size: 20px;color:#300175">{{ fullform(team) }}:<span> {{ value }}</span></p>
+      </div>
+  {% endfor %}
+</div>
+</div>
+    <center>
+    <div>
+    <img src="data:image/png;base64, {{ chart1 }}" width='50%' height='20%' alt="Team Insights Chart">
+    <img src="data:image/png;base64, {{ chart2 }}" width='60%' height='50%' alt="Team Insights Chart">
+    <img src="data:image/png;base64, {{ chart3 }}" width='60%' height='50%' alt="Team Insights Chart">
+    </div>
+  </center>
+  </div>
+  
+
+
+</body>
+<footer style="background-color:#E73493;">
+
+  <div style="display: flex; align-items: center; justify-content: center;">
+
+    <p style="color:#fff;"> Project on Exploratory Data Analysis by 
+      <a href="https://www.linkedin.com/in/sunilthetechy" target="_blank" style="color: #fff; text-decoration: none;">
+        Sunil The Techy
+      </a></p>
+
+</footer>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket World Cup Analysis</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <style>
+
+    body {
+      font-family: 'Poppins', sans-serif;  
+      margin: 0;
+      background-color: #02a7d1;
+      color: #fff;
+    }
+    h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+    header {
+      background-color: #300175;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1c5d9c; 
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px #aaa;
+    }
+
+   
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- <header>  
+    <div style="display: inline-block;">
+      <img src="cwc logo.jpg" width="100px" height="80px" alt="">
+      <h1>Cricket World Cup Analysis</h1>
+      <h3>FROM 1975 - 2019</h3>
+    </div>
+  </header> -->
+  <header>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+  
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+  
+      <div>
+        <h1>Cricket World Cup Analysis</h1>
+        <h3>FROM 1975 - 2019</h3>  
+      </div>
+  
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+  
+    </div>
+  
+  </header>
+  <div class="content">
+    <br><br>
+    <center>
+      <h1>Select a Team:</h1>
+      <form action="/team" method="post">
+          <select name="team">
+              <option value="AUS">Australia</option>
+              <option value="ENG">England</option>
+              <option value="IND">India</option>
+              <option value="PAK">Pakistan</option>
+              <option value="SL">Sri Lanka</option>
+              <option value="WI">West Indies</option>
+              <option value="EA">East Africa</option>
+              <option value="NZ">New Zealand</option>
+              <option value="CAN">Canada</option>
+              <option value="ZIM">Zimbabwe</option>
+              <option value="SA">South Africa</option>
+              <option value="UAE">United Arab Emirates</option>
+              <option value="NED">Netherlands</option>
+              <option value="KEN">Kenya</option>
+              <option value="SCO">Scotland</option>
+              <option value="BAN">Bangladesh</option>
+              <option value="NAM">Namibia</option>
+              <option value="BER">Bermuda</option>
+              <option value="IRE">Ireland</option>
+              <option value="AFG">Afghanistan</option>
+          </select>
+          <input type="submit" value="GET INSIGHTS">
+      </form>
+       
+    
+    </center>
+    <br><br><br><br>
+  </div>
+  
+
+</body>
+<footer style="background-color:#E73493;">
+
+  <div style="display: flex; align-items: center; justify-content: center;">
+
+    <p style="color:#fff;"> Project on Exploratory Data Analysis by 
+      <a href="https://www.linkedin.com/in/sunilthetechy" target="_blank" style="color: #fff; text-decoration: none;">
+        Sunil The Techy
+      </a></p>
+
+</footer>
+</html>

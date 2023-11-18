@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cricket World Cup Analysis</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      background-color: #300175;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    .text-info {
+      color: #007bff !important;
+    }
+
+    .text-summary {
+      margin-top: 30px;
+    }
+
+    .chart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .lead {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #300175;
+      font-weight:900;
+    }
+    .chart-container img {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+    span{
+      font-size: 18px;
+      line-height: 1.6;
+      color: #E73493;
+      font-weight:900;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+      <div>
+        <h1>Cricket World Cup Analysis</h1>
+        <h3 style="color:#fff">FROM 1975 - 2019</h3>
+      </div>
+      <img src="{{ url_for('static', filename='logo.jpg') }}" width="100" height="100">
+    </div>
+  </header>
+
+  <div>
+    <center><h2>{{ fullform(selected_team) }} Performance in World Cups</h2>
+    <div class="text-summary">
+      <p class="lead">
+        Total Matches Played: <span>{{ matches }}</span><br>
+        Matches Won: <span>{{ won }}</span><br>
+        Matches Lost: <span>{{ lost }}</span><br>
+        Total Runs Scored: <span>{{ runs }} </span><br>
+        Total Wickets Taken: <span>{{ wickets }}<span>
+      </p></center>
+    </div>
+
+    <div class="chart-container">
+      <img src="data:image/png;base64, {{ chart1 }}" alt="Team Insights Chart 1">
+      <img src="data:image/png;base64, {{ chart2 }}" alt="Team Insights Chart 2">
+      <img src="data:image/png;base64, {{ chart3 }}" alt="Team Insights Chart 3">
+    </div>
+  </div>
+
+</body>
+<footer style="background-color:#E73493;">
+
+  <div style="display: flex; align-items: center; justify-content: center;">
+
+    <p style="color:#fff;"> Project on Exploratory Data Analysis by 
+      <a href="https://www.linkedin.com/in/sunilthetechy" target="_blank" style="color: #fff; text-decoration: none;">
+        Sunil The Techy
+      </a></p>
+
+</footer>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
