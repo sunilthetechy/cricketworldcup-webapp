@@ -85,7 +85,7 @@ def overall_performance():
     print(x,y)
     plt.figure(figsize=(9,6))
     sns.set(style="whitegrid")
-    sns.countplot(y,palette='muted')
+    sns.countplot(y=y,palette='muted',hue=y)
 
     plt.xlabel('TEAMS')
     plt.ylabel('Number of Trophies')
