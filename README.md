@@ -18,7 +18,8 @@ This web application provides in-depth analysis and insights into the Cricket Wo
 
 ## Data Source
 
-The analysis is based on the Cricket World Cup dataset, and the data is visualized using Matplotlib and Seaborn. The dataset covers match details, team performances, and other relevant statistics.
+The analysis is based on the Cricket World Cup dataset and it is collected from kaggle
+Dataset Link : https://www.kaggle.com/datasets/amalab182/cricket-world-cup-scores1975-2019
 
 ## Contributing
 
@@ -28,5 +29,9 @@ Contributions are welcome! Feel free to submit issues, propose new features, or 
 
 The application is deployed on Render, providing free and easy access for cricket enthusiasts to explore and understand historical Cricket World Cup data.
 
+## Social Media Presense
 
+Portfolio : https://www.sunilyadavtechy.com
+Linkedin : https://www.linkedin.com/in/sunilthetechy
+Instagram : https://www.instagram.com/sunil_the_techy
 
