@@ -320,3 +320,5 @@ def head_to_head_stats(team1, team2):
     team2_wickets = h2h['WICKETS TAKEN'].sum()
     return render_template('head-to-head-stats.html',lowercase=lowercase,fullform=fullform, matches=matches_played,team1=team1, team2=team2, team1_won=team1_won,team1_lost=team1_lost,team1_runs=team1_runs,team1_wickets=team1_wickets,team2_lost=team2_lost,team2_runs=team2_runs,team2_wickets=team2_wickets,team2_won=team2_won,noresult=noresult,draws=draws,flag1=flag1,flag2=flag2)
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0',port='5001')
